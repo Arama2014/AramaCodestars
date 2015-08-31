@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
         
      NSArray *finalList  = [ earthy CombineArr:myList withArray1:otherList];
         //send the ComineArr:withArray1 message to earthy and store it in NSArray *finalList
-
+//arrayByAddingObjectsFromArray 
             
         NSLog(@"%@", finalList);
     
