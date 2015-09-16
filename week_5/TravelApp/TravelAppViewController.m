@@ -75,14 +75,14 @@
         destViewController.mustSeeImage = [mustSeeImages objectAtIndex:indexPath.row];
         destViewController.mustSeeDetailDescription = [mustSeeDescriptions objectAtIndex:indexPath.row];
     }
-
-    -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
         
         static NSString *cellIdentifier =@"Cell";
         TravelAppViewCell *cell =(TravelAppViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
    
-        cell.nameLabel.text =[mustSeeNames objectAtIndexindexPath.row];
-        cell.thumbnailImageView.image =[UIImage imageNamed:[mustSeeImages objectAtIndexindexPath.row]];
+        cell.nameLabel.text =[mustSeeNames objectAtIndex:indexPath.row];
+        cell.thumbnailImageView.image =[UIImage imageNamed:[mustSeeImages objectAtIndex:indexPath.row]];
     
     // Configure the cell...
     
@@ -91,7 +91,7 @@
     
     
 
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
