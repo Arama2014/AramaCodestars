@@ -19,10 +19,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MxI-jY-MJ6">
-                                            <rect key="frame" x="8" y="0.0" width="82" height="70"/>
+                                            <rect key="frame" x="0.0" y="1" width="87" height="70"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mustseename" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baj-YH-U4X">
-                                            <rect key="frame" x="111" y="10" width="146" height="54"/>
+                                            <rect key="frame" x="95" y="10" width="208" height="54"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Otz-Gu-syr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="-96"/>
+            <point key="canvasLocation" x="859" y="-100"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="FEg-1d-Utq">
@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYa-fB-bY6">
-                                <rect key="frame" x="80" y="84" width="42" height="21"/>
+                                <rect key="frame" x="40" y="72" width="272" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,11 +95,11 @@
             </objects>
             <point key="canvasLocation" x="1530" y="-31"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="US0-ws-Zs7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qdX-BY-7Vy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JDV-XX-Qld"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="JDV-XX-Qld"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rBW-0a-Bp5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="462" y="-96"/>
         </scene>
-        <!--Item-->
+        <!--BIO-->
         <scene sceneID="TKs-cm-ion">
             <objects>
                 <navigationController id="Krs-Tp-R6O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sk0-lj-Ey0"/>
+                    <tabBarItem key="tabBarItem" title="BIO" id="Sk0-lj-Ey0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Jm-KD-0B5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -160,13 +160,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAx-4h-ubC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240" y="636"/>
+            <point key="canvasLocation" x="1236" y="648"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="bzq-K5-ym0">
             <objects>
                 <navigationController id="PJT-nl-5Ex" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mQf-7k-kCY"/>
+                    <tabBarItem key="tabBarItem" title="About" id="mQf-7k-kCY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q3c-v5-0eg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="-78" y="711"/>
         </scene>
-        <!--About View Controller-->
+        <!--About-->
         <scene sceneID="uCA-5D-5GS">
             <objects>
                 <viewController id="Nl6-XT-eBN" customClass="AboutViewController" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bi2-MJ-gVc"/>
+                    <navigationItem key="navigationItem" title="About" id="Bi2-MJ-gVc"/>
                     <connections>
                         <outlet property="webView" destination="JmW-R9-9wc" id="d23-vY-iT1"/>
                     </connections>
@@ -216,6 +216,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KsX-jl-DNc">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="qdX-BY-7Vy" kind="relationship" relationship="viewControllers" id="n1Y-lb-oqt"/>
