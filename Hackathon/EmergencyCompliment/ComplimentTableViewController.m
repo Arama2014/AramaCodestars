@@ -9,36 +9,49 @@
 #import "ComplimentTableViewController.h"
 
 @interface ComplimentTableViewController ()
-
+//define a contract private to implementation
 @end
 
 @implementation ComplimentTableViewController
 
 {
-    NSArray *complimentNames;
-    NSArray *complimentImages;
+    //Array that contains a bunch of dictionaries. Array represents all cells. Dictionary represents each individual cell
+    
+    // Table view cell dat
+    NSArray *_tableViewCellData;
+    
+    // collection view data
+    NSArray *_loves;
+    NSArray *_awesomes;
+    
+    // array of different item arrays that will populate collection view
+    NSArray *_itemsToDisplay;
     
 }
+                           
+                           //create a dictionay, the dictionary will contain the images
+                          // the array will contain all of the dictionaries
+                           //categories can be the key
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /*
-     Create
-     NSDictionary *menuItems = @[{image 
-        @{complment1: @Awesome1, image: "Awesome1.jpg"}, 
-     ];
-     */
-//category
-    complimentNames =@[@"Awesome1", @"Hug1", @"Love1", @"Random1", @"Thankyou1", @"Thinking1"];
+    // Table view cell data
+    _tableViewCellData = @[
+                                @{@"image": @"Awesome1.jpg", @"title": @"Awesome1"},
+                                @{@"image": @"Hug1.jpg", @"title": @"Hug1"},
+                                @{@"image": @"Love1.jpg",@"title": @"Love1"},
+                                @{@"image": @"Random1.jpg", @"title": @"Random1"},
+                                @{ @"image": @"Thankyou1.jpg",@"title": @"Thankyou1.jpg"},
+                                @{@"image": @"Thinking1.jpg", @"title": @"Thinking1"}
+                            ];
+
     
-    complimentImages =@[@"Awesome1.jpg", @"Hug1.jpg", @"Love1.jpg", @"Random1.jpg", @"Thankyou1.jpg", @"Thinking1.jpg"];
+    // collection view data
+    _awesomes = [NSArray arrayWithObjects: @{@"image": @"image1.jpg", @"title": @"Awesome 1"}, @{@"image": @"image1.jpg", @"title": @"Awesome 1"}, nil];
+                                                                                                
+    _itemsToDisplay = [NSMutableArray arrayWithObjects: _awesomes, nil];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,17 +70,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return[complimentNames count];
+    return[_tableViewCellData count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellIdentifier =@"Cell";
+    static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.textLabel.text =[complimentNames objectAtIndex:indexPath.row];
-    cell.imageView.image =[UIImage imageNamed:[complimentImages objectAtIndex:indexPath.row]];
+    cell.textLabel.text =[_tableViewCellData objectAtIndex:indexPath.row][@"title"];
+    cell.imageView.image =[UIImage imageNamed:[_tableViewCellData objectAtIndex:indexPath.row][@"image"]];
     
     // Configure the cell...
     

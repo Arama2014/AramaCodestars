@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40A1721E-505E-4EBE-9A72-3C8985C0028A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EmergencyCompliment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7EB06C59A939B874554146A4C3093959C56A21C8</key>
+		<string>https://github.com/Arama2014/AramaCodestars.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hackathon/EmergencyCompliment/EmergencyCompliment.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7EB06C59A939B874554146A4C3093959C56A21C8</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Arama2014/AramaCodestars.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7EB06C59A939B874554146A4C3093959C56A21C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7EB06C59A939B874554146A4C3093959C56A21C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AramaCodestars</string>
+		</dict>
+	</array>
+</dict>
+</plist>
