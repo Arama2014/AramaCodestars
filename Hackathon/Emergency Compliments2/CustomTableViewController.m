@@ -1,70 +1,76 @@
 //
-//  ComplimentTableViewController.m
-//  EmergencyCompliment
+//  CustomTableViewController.m
+//  Emergency Compliments2
 //
-//  Created by Arama Brown on 9/19/15.
+//  Created by Arama Brown on 9/26/15.
 //  Copyright (c) 2015 Arama Brown. All rights reserved.
 //
 
-#import "ComplimentTableViewController.h"
+#import "CustomTableViewController.h"
+#import "MyTableViewCell.h"
+@interface CustomTableViewController ()
 
-@interface ComplimentTableViewController ()
-//define a contract private to implementation
 @end
 
-@implementation ComplimentTableViewController
+@implementation CustomTableViewController
+
 
 {
+    NSArray * _firstPageTableData;
     //Array that contains a bunch of dictionaries. Array represents all cells. Dictionary represents each individual cell
     
-    // Table view cell data
-    NSArray *_tableViewCellData;  //array of dictionaries 
+    
+    NSArray * pictures;
+    NSArray *words;
+    
+    NSDictionary *pair1;
+    NSDictionary *pair2;
+    NSDictionary *pair3;
+    NSDictionary *pair4;
+    NSDictionary *pair5;
+    NSDictionary *pair6;
+    
     
     // collection view data
-  //  NSArray *_loves;
-   // NSArray *_awesomes;
+    //  NSArray *_loves;
+    // NSArray *_awesomes;
     //NSString *string;
     
     // array of different item arrays that will populate collection view
     NSArray *_itemsToDisplay;
     
+    
+    
 }
-                           
-                           //create a dictionay, the dictionary will contain the images
-                          // the array will contain all of the dictionaries
-                           //categories can be the key
-                            //do we not have to give each dictionary a name?
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Table view cell data
-    _tableViewCellData = @[
-                                @{@"image": @"Awesome1.jpg", @"title": @"Awesome"},
-                                @{@"image": @"Hug1.jpg", @"title": @"Hug"},
-                                @{@"image": @"Love1.jpg",@"title": @"Love"},
-                                @{@"image": @"Random1.jpg", @"title": @"Random"},
-                                @{ @"image": @"Thankyou1.jpg",@"title": @"Thank you"},
-                                @{@"image": @"Thinking1.jpg", @"title": @"Thinking"}
-                                
-       
-                                
-                        ];
+    //Tableview cell data for first page
     
-    //maybe change to dictionaries don't work because I didn't declare a mutable nsarray_tableViewCellData?
-    //keys need to be unique go back and change each "image" and make them different
-    //"Awesomes" is the key for "Awesome", and "Awesomepics" is the key for "Awesome1.jpg"
-   // NSLog(@"_tableViewCellData %@", _tableViewCellData);
-   // NSString  *string = [_tableViewCellData objectForKey:@"image"];
- //   NSLog(@"string %@", string);
+
+                            
+        pair1 =   @{@"Awesomepic": @"Awesome1.jpg", @"Awesometitle":@"Awesome"};
+        pair2 =   @{@"Hugpic": @"Hug1.jpg", @"Hugtitle":@"Hug"};
+        pair3 =   @{@"Lovepic": @"Love1.jpg", @"Lovetitle": @"Love"};
+        pair4 =   @{@"Randompic": @"Random1.jpg", @"Randomtitle" : @"Random"};
+        pair5 =   @{@"Thankyoupic": @"Thankyou1.jpg", @"Thankyoutitle": @"Thank You"};
+        pair6 =   @{@"Thinkingpic" : @"Thinking1.jpg", @"Thinkingtitle": @"Thinking"};
+    
+    _firstPageTableData   = @[pair1, pair2, pair3, pair4, pair5, pair6];
+     NSLog(@"_firstPageTableData  %@", _firstPageTableData);
+    
+    pictures = @[@"Awesome1.jpg",@"Hug1.jpg", @"Love1.jpg",@"Random1.jpg", @"Thankyou1.jpg", @"Thinking1.jpg"];
+    words = @[@"Awesome",@"Hug",@"Love",@"Random",@"Thank You",@"Thinking"];
     
     
     
-    // collection view data
-//    _awesomes = [NSArray arrayWithObjects: @{@"image": @"image1.jpg", @"title": @"Awesome 1"}, @{@"image": @"image1.jpg", @"title": @"Awesome 1"}, nil];
-                                                                                                
-  //  _itemsToDisplay = [NSMutableArray arrayWithObjects: _awesomes, nil];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,17 +89,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return[_tableViewCellData count];
+    return [_firstPageTableData count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    MyTableViewCell *cell = (MyTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.textLabel.text =[_tableViewCellData objectAtIndex:indexPath.row][@"title"];
-    cell.imageView.image =[UIImage imageNamed:[_tableViewCellData objectAtIndex:indexPath.row][@"image"]];
+    
+    
+//    cell.categoryLabel.text =[_firstPageTableData[indexPath.row] objectForKey: @"Awesome1.jpg"];
+//    cell.categoryLabel.text =[_firstPageTableData[indexPath.row] objectForKey: @"Hug1.jpg"];
+//    cell.categoryLabel.text =[_firstPageTableData[indexPath.row] objectForKey:@"Love1.jpg"];
+//    cell.categoryLabel.text = [_firstPageTableData[indexPath.row] objectForKey:
+//        @"Random1.jpg"];
+//    cell.categoryLabel.text = [_firstPageTableData[indexPath.row] objectForKey: @"Thankyou1.jpg"];
+//    cell.categoryLabel.text = [_firstPageTableData [indexPath.row] objectForKey:
+//                               @"Thinking1.jpg"];
+    //
+    cell.categoryLabel.text =[words objectAtIndex:indexPath.row];
+    cell.thumbnailImageView.image =[UIImage imageNamed:[pictures objectAtIndex:indexPath.row]];
     
     // Configure the cell...
     

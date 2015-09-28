@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComplimentTableViewController : UITableViewController
+@interface ComplimentTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
